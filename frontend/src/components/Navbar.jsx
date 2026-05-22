@@ -46,17 +46,27 @@ const Navbar = () => {
               {/* ONLY ADMIN */}
               {role === "admin" && (
                 <li>
-                  <NavLink to="/dashboard">Dashboard</NavLink>
+                  <NavLink className="menuLink" to="/dashboard">
+                    Dashboard
+                  </NavLink>
                 </li>
               )}
 
-              {/* 🔥 SHOW LOGOUT IF LOGGED IN */}
+              {/* SHOW LOGOUT IF LOGGED IN */}
               {token && (
-                <li>
-                  <button className="menuLink" onClick={handleLogout}>
-                    Logout
-                  </button>
-                </li>
+                <>
+                  <li>
+                    <NavLink className="menuLink" to="/profile">
+                      Profile
+                    </NavLink>
+                  </li>
+
+                  <li>
+                    <button className="menuLink" onClick={handleLogout}>
+                      Logout
+                    </button>
+                  </li>
+                </>
               )}
             </ul>
           </div>
