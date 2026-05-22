@@ -31,6 +31,8 @@ npm run dev
 
 <!-- student login -->
 
+# student login details
+
 kanav@gmail.com
 Kanav@123
 
@@ -38,6 +40,8 @@ kunal@gmail.com
 kunal123
 
 <!-- admin login -->
+
+# admin login details
 
 admin@test.co,
 123456
