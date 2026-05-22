@@ -3,6 +3,9 @@ import asyncHandler from "../utils/asyncHandler.js";
 
 // GET STUDENT PROFILE (SELF ONLY)
 export const getStudentProfile = asyncHandler(async (req, res) => {
+  console.log("trigger getSudentProfileHandelr !");
+  console.log("REQ USER:", req.user);
+
   const student = await User.findById(req.user._id).select("-password");
 
   if (!student) {
